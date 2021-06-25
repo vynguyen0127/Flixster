@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    tools:context=".MovieDetailsActivity">
+
+    <TextView
+        android:id="@+id/tvTitleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="30dp"
+        tools:text="A Quiet Place Part II" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDirectorName"
+        android:layout_alignLeft="@id/tvDirectorName"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="640dp"
+        android:layout_marginLeft="-1dp"
+        android:layout_marginTop="28dp"
+        android:numStars="5"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextView
+        android:id="@+id/tvOverviewDetails"
+        android:layout_width="396dp"
+        android:layout_height="91dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="250dp"
+        android:scrollbars="vertical"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="217dp"
+        tools:text="Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path" />
+
+    <TextView
+        android:id="@+id/tvCast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOverviewDetails"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="416dp"
+        android:layout_marginTop="-302dp"
+        android:text="Cast"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOverviewDetails"
+        android:layout_alignTop="@id/tvCast"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="116dp"
+        android:text="Director"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCredits"
+        android:layout_width="wrap_content"
+        android:layout_height="287dp"
+        android:layout_below="@+id/tvCast"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="405dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="37dp"
+        android:layout_toStartOf="@+id/player"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/tvDirectorName"
+        android:layout_width="148dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tvDirector"
+        android:layout_alignLeft="@id/tvDirector"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="7dp"
+        tools:text="John Krasinski" />
+
+    <ImageView
+        android:id="@+id/ivBackdrop"
+        android:layout_width="340dp"
+        android:layout_height="188dp"
+        android:layout_alignEnd="@id/tvOverviewDetails"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="42dp"
+        app:srcCompat="@drawable/flicks_backdrop_placeholder" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="139dp"
+        android:layout_height="85dp"
+        android:layout_alignTop="@id/ivBackdrop"
+        android:layout_alignBottom="@id/ivBackdrop"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="97dp"
+        android:layout_marginBottom="51dp"
+        android:elevation="5dp"
+        app:srcCompat="@drawable/play_btn" />
+
+    <Button
+        android:id="@+id/btnSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="Show Similar Movies" />
+
+</RelativeLayout>
